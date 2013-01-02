@@ -1,4 +1,4 @@
-burg_panels_image_link
+Panels Image Link for Burgmann Website
 ======================
 
 This is a fork of http://drupalcode.org/project/panels_image_link.git
