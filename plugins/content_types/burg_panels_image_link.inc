@@ -55,11 +55,12 @@ function burg_panels_image_link_admin_info($subtype, $conf, $context = NULL) {
  */
 function burg_panels_image_link_render($subtype, $conf, $args, $context) {
   if ( isset( $conf['image'] ) ) {
+        $content = "";
     if ( isset( $conf['title'] ) && !empty( $conf['title'] ) ) {
       if ( isset( $conf['target_url'] ) && !empty( $conf['target_url'] ) ) {
-        $content = '<div class="panels-image-link-title">' . l(filter_xss_admin($conf['title']), $conf['target_url'], array( 'html' => TRUE, )) . '</div>';
+        $content .= '<div class="panels-image-link-title">' . l(filter_xss_admin($conf['title']), $conf['target_url'], array( 'html' => TRUE, )) . '</div>';
       } else {
-        $content = '<div class="panels-image-link-title">' . filter_xss_admin($conf['title']) . '</div>';
+        $content .= '<div class="panels-image-link-title">' . filter_xss_admin($conf['title']) . '</div>';
       }
     }
     $image_vars = array(
