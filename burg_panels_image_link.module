@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * @file
+ * Simple panels content type for displaying an uploaded image and linking it to a provided url/path
+ */
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function burg_panels_image_link_ctools_plugin_directory($module, $plugin) {
+  if ( ( $module == 'ctools' || $module == 'panels' ) && !empty( $plugin ) ) {
+    return 'plugins/' . $plugin;
+  }
+}
